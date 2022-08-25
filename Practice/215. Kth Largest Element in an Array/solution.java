@@ -9,16 +9,18 @@ public class solution {
             }
             for(int i = k; i<nums.length;i++){
                 if(pq.peek()< nums[i]){
-                    pq.poll();
-                    pq.add(nums[i]);
-
+                    System.out.println("Value Delete : "+ pq.poll());
+                    
+                    System.out.println("Value Added : " + pq.add(nums[i]));
+                    
                 }
             }
+        System.out.println(pq.peek());
         return pq.peek();
     }
     public static void main(String[] args) {
-        int num[]={3,2,1,5,6,4};
-        int k = 2;
+        int num[]={1,2,3,4,5,6};
+        int k = 4;
         findKthLargest(num,k);
     }
 }
